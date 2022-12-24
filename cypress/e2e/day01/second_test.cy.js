@@ -16,12 +16,12 @@ context('My Second Test', () => {
           cy.title().should('include','Google')
         
     })
-      it('Search Test',()=>{
+      it.skip('Search Test',()=>{
     cy.get('#L2AGLb > .QS5gu').click()    
     cy.get('.gLFyf').type('Cypress.io{enter}')
         
     })
-      it('Search Test',()=>{
+      it.only('Search Test',()=>{
             cy.get('#L2AGLb > .QS5gu').click() 
             cy.get('.gLFyf',{timeout:3000}).type('Cypress.io{enter}')
                     
