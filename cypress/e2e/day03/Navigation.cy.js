@@ -1,6 +1,6 @@
 /// reference types="cypress" />
 describe('Navigation', () => {
-    it.only('Back, Forward, Refresh',()=>{
+    it.skip('Back, Forward, Refresh',()=>{
               cy.visit('https://www.fhctrip.com/')
               cy.wait(3000)
               cy.get('#navLogon > .nav-link').click()
@@ -14,7 +14,16 @@ describe('Navigation', () => {
 
  
     })
-      it('',()=>{
+      it('Changing Navigation',()=>{
+            cy.visit('https://www.fhctrip.com/')
+              cy.wait(3000)
+              cy.get('#navLogon > .nav-link').click()
+                 cy.wait(3000) 
+
+                 cy.go('back').go('forward').go(-1).go(1)
+                 cy.reload(true)
+
+
         
     })
 })
