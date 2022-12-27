@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('ap_login', (email, password) => {
+  cy.visit('https://automationexercise.com/');
+  cy.get('.shop-menu > .nav > :nth-child(4) > a').click();
+  cy.get('.login-form > form > [type="email"]').type(email);
+  cy.get('[type="password"]').type(password);
+  cy.get('.login-form > form > .btn').click();
+});
