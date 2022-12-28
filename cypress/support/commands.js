@@ -31,3 +31,14 @@ Cypress.Commands.add('ap_login', (email, password) => {
   cy.get('[type="password"]').type(password);
   cy.get('.login-form > form > .btn').click();
 });
+Cypress.Commands.add('tutti_search',(productName)=>{
+    cy.visit('https://www.tutti.ch')
+    cy.get('#onetrust-accept-btn-handler').click()
+    cy.get('input[id="mui-2"]').type(productName)
+    cy.get('.MuiInputBase-root > .MuiBox-root > .MuiButtonBase-root').click()
+    
+ 
+
+    
+
+})

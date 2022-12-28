@@ -13,10 +13,15 @@ describe('Custom Command', () => {
           cy.ap_login('ragopakejmar@gmail.com','Ragopa.123')
         
     })
-  it('Negative Login', () => {
+  it.only('Negative Login', () => {
       //it comes from Command JS function
           cy.ap_login('ragopakejmar@gmail.com','Ragopa123')
           cy.get('.login-form > form > p').should('have.text','Your email or password is incorrect!')
+          cy.screenshot()
 
   });
+     it('Tutti Search',()=>{
+         cy.tutti_search('leder sessel')
+        
+    })
 });
