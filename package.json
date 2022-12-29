@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-dashboard":"npx cypress run --spec '/Users/bayram/Desktop/cypress/cypress/e2e/day02' --record --key 7671d399-d5b9-4851-a859-995eb243e2bc",
+    "dashboard_day03":"npx cypress run --spec '/Users/bayram/Desktop/cypress/cypress/e2e/day03' --record --key 97a506a2-207d-4833-98d3-1e95b84f4e6b"
   },
   "keywords": [],
   "author": "",

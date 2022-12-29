@@ -27,3 +27,17 @@ PACKAGE.JSON dosyası içerisindeki script bölümüne kendimizin belirleyeceği
 “mycode” diye bir komut tanımlamış olduk
 Oluşturduğumuz bu komutu terminalde şu şekilde çalıştıracağız.
 npm run mycode
+
+
+all test will send, we shoould  change key kod from proje
+“test-dashboard” : “npx cypress run --record --key dcc38a3d-1d6c-47c8-ac00-733e141f5d7b",
+only one folder will be working
+“dashboard_day02”: “npx cypress run --spec ‘/Users/bayram/Desktop/cypress/cypress/e2e/day02’ --record --key  dcc38a3d-1d6c-47c8-ac00-733e141f5d7b"
+
+
+
+
+
+
+
+
