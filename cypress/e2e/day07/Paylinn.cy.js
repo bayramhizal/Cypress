@@ -3,7 +3,7 @@ import HomePage from '../PageObjectModel/HomePage.cy'
 import LoginPage from '../PageObjectModel/LoginPage.cy'
 describe('PayLinn Bank', () => {
      before(function(){
-       cy.fixture('paylinn').then(function(data){
+       cy.fixture('paylinn.json').then(function(data){
            this.data=data
        })
     })
