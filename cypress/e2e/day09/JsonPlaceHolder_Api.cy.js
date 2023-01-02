@@ -18,10 +18,22 @@ describe('JsonPlaceHolder', () => {
         })
  
     })
-      it('Test 02',()=>{
+      it.skip('Test 02',()=>{
         cy.request(requestURL).should((response)=>{
             expect(response.status).to.eq(200)
             expect(response.body[0].postId).to.eq(1)
         })
     })
+      it.only('Test 3',()=>{
+
+        cy.request({
+            url: requestURL,
+            method:'GET'}).should((response)=>{
+                      expect(response.status).to.eq(200)
+                      expect(response.body[0].postId).to.eq(1)
+            
+            })
+        
+    
+})
 })
