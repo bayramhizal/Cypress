@@ -3,7 +3,7 @@ describe("Post With Auto", () => {
   it.only("Test 01", () => {
     cy.request({
       url: "https://restful-booker.herokuapp.com/booking",
-      method: "POST",
+      method: "post",
       auth: {
         "username": "admin",
         "password": "password123"
@@ -25,6 +25,9 @@ describe("Post With Auto", () => {
 
     }).then((response)=>{
         console.log(response)
+        expect(response.status).to.eq(200)
+        expect(response.body.booking.additionalneeds).to.eq("Breakfast and Spa")
+
 
     })
   })
